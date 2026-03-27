@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>projeto</title>
+<style>
+body{
+  background:#f0f0f0;
+  text-align:center;
+}
+h1{
+  color:blue;
+}
+  
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Busca de Promoções</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: #f5f5f5;
+    }
+
+    h1 {
+      margin-top: 30px;
+    }
+
+    .mercado {
+      display: inline-block;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 150px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      margin: 10px;
+    }
+
+    .mercado img {
+      width: 100px;
+      height: auto;
+    }
+
+    .categorias {
+      display: none;
+      margin-top: 15px;
+    }
+
+    .categorias a {
+      display: block;
+      margin: 6px;
+      padding: 8px;
+      background: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      color: black;
+      border: 1px solid #ddd;
+    }
+
+    .categorias a:hover {
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔍 Buscar Promoções</h1>
+
+  <!-- MERCADO COM IMAGEM -->
+  <div class="mercado" onclick="toggleCategorias('nordestao')">
+    <img src="https://play-lh.googleusercontent.com/QFcbFn0DW7TXWg6FIwYDmmNseQ6aHIUgaJhK6Lg_vK-2EbUxqTPEdITSa85zm2vg7kI" alt="Nordestão">
+    <p>Nordestão</p>
+  </div>
+
+  <!-- CATEGORIAS -->
+  <div id="nordestao" class="categorias">
+<a href="https://www.lojaonline.nordestao.com.br/" target="_blank">🔥 Destaque</a>
+
+<a href="https://www.lojaonline.nordestao.com.br/busca?termo=cafe" target="_blank">☕ Café</a>
+
+    <a href="https://www.lojaonline.nordestao.com.br/busca?termo=leites" target="_blank">🥛 Leites</a>
+
+    <a href="https://www.lojaonline.nordestao.com.br/busca?termo=carne" target="_blank">🥩 Carne</a>
+
+    <a href="https://www.lojaonline.nordestao.com.br/busca?termo=leite" target="_blank">🥛 Leite</a>
+
+    <a href="https://www.lojaonline.nordestao.com.br/busca?termo=limpeza" target="_blank">🧼 Limpeza</a>
+
+    <a href="https://www.lojaonline.nordestao.com.br/busca?termo=danone" target="_blank">🍶 Danone</a>
+
+    <a href="https://www.lojaonline.nordestao.com.br/busca?termo=manteiga" target="_blank">🧈 Manteiga</a>
+
+    <a href="https://www.lojaonline.nordestao.com.br/busca?termo=ovos" target="_blank">🥚 Ovos</a>
+
+    <a href="https://www.lojaonline.nordestao.com.br/busca?termo=queijo%20mussarela" target="_blank">🧀 Queijo Mussarela</a>
+
+    <a href="https://www.lojaonline.nordestao.com.br/busca?termo=queijo%20coalho" target="_blank">🧀 Queijo Coalho</a>
+
+    <a href="https://www.lojaonline.nordestao.com.br/busca?termo=queijo%20manteiga" target="_blank">🧀 Queijo Manteiga</a>
+
+  </div>
+  <script>
+    function toggleCategorias(id) {
+      let div = document.getElementById(id);
+      div.style.display = div.style.display === "block" ? "none" : "block";
+    }
+  </script>
+<!-- MERCADO BOMDIA -->
+<div class="mercado" onclick="toggleCategorias('bomdia')">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSciX1Lg1P8q_pek2G4naoB0hFEXuKaoYqBMQ&s" alt="Bomdia">
+  <p>Bomdia</p>
+</div>
+
+<!-- CATEGORIAS BOMDIA -->
+<div id="bomdia" class="categorias">
+
+  <a href="https://www.bomdiasupermercado.com.br/#/Ofertas" target="_blank">🔥 Ofertas</a>
+
+  
+</div>
+</body>
+</html>
+<!-- MERCADO ATACADÃO -->
+<div class="mercado" onclick="toggleCategorias('atacadao')">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFuhiISP1Db8A7nyun18110ezxIvca2__6uQ&s" alt="Atacadão">
+  <p>Atacadão</p>
+</div>
+
+<!-- CATEGORIAS ATACADÃO -->
+<div id="atacadao" class="categorias">
+
+  <a href="https://www.atacadao.com.br/catalogo" target="_blank">🔥 Destaques</a>
+
+  <a href="https://www.atacadao.com.br/mercearia/biscoitos" target="_blank">🍪 Biscoitos</a>
+
+  <a href="https://www.atacadao.com.br/limpeza" target="_blank">🧼 Limpeza</a>
+
+  <a href="https://www.atacadao.com.br/mercearia/chocolates" target="_blank">🍫 Chocolates</a>
+
+  <a href="https://www.atacadao.com.br/higiene-e-perfumaria" target="_blank">🧴 Higiene</a>
+
+  <a href="https://www.atacadao.com.br/padaria-e-matinais/leites" target="_blank">🥛 Leites</a>
+
+  <a href="https://www.atacadao.com.br/cafes-chas-e-achocolatados" target="_blank">☕ Cafés</a>
+
+</div>
+<script>
+console.log("Funcionando!");
+
+</script>
+
+</body>
+</html>
+  
