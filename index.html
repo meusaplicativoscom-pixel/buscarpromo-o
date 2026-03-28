@@ -59,12 +59,24 @@ h1 {
   padding: 12px;
   width: 90%;
   max-width: 320px;
-  background: white;
-  border-radius: 8px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  border-radius: 10px;
   text-decoration: none;
   color: black;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   font-size: 16px;
+
+  /* efeito 3D */
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.2),
+              -2px -2px 6px rgba(255,255,255,0.7);
+
+  transition: all 0.2s ease;
+}
+
+.categorias a:active {
+  box-shadow: inset 3px 3px 6px rgba(0,0,0,0.2),
+              inset -2px -2px 5px rgba(255,255,255,0.7);
+  transform: scale(0.97);
 }
 
 .categorias a:active {
@@ -98,72 +110,66 @@ h1 {
   <div class="mercado" onclick="toggleCategorias('nordestao')">
     <img src="https://play-lh.googleusercontent.com/QFcbFn0DW7TXWg6FIwYDmmNseQ6aHIUgaJhK6Lg_vK-2EbUxqTPEdITSa85zm2vg7kI">
     <p>Nordestão</p>
+<!-- CATEGORIAS NORDESTÃO -->
+<div id="nordestao" class="categorias">
+
+<a href="https://www.lojaonline.nordestao.com.br/" target="_blank">  Ofertas🛒 Nordestão</a>
+
+</div>
   </div>
 
   <!-- BOMDIA -->
   <div class="mercado" onclick="toggleCategorias('bomdia')">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSciX1Lg1P8q_pek2G4naoB0hFEXuKaoYqBMQ&s">
     <p>Bomdia</p>
+<!-- BOMDIA -->
+<div id="bomdia" class="categorias">
+<a href="https://www.bomdiasupermercado.com.br/#/Ofertas" target="_blank">Ofertas 🛒Bom dia</a>
+</div>
   </div>
 
    <!-- Super show -->
   <div class="mercado" onclick="toggleCategorias('Super show')">
     <img src="https://th.bing.com/th/id/OIP.63H1DpHzxtrVGNFGzapWegAAAA?w=205&h=103&c=7&r=0&o=7&pid=1.7&rm=3">
     <p>Super show</p>
+<!-- Super show -->
+<div id="Super show" class="categorias">
+<a href="https://redesupershow.com.br/encarte/" target="_blank"> Ofertas 🛒 Super Show</a>
+</div>
   </div>
 
   <!-- Assaí -->
   <div class="mercado" onclick="toggleCategorias('Assaí')">
     <img src="https://images.seeklogo.com/logo-png/25/2/assai-atacadista-logo-png_seeklogo-255596.png">
     <p>Assaí</p>
+<!-- Assaí -->
+<div id="Assaí" class="categorias">
+<a href="https://www.assai.com.br/ofertas/rio-grande-do-norte/assai-natal" target="_blank">Ofertas 🛒 Assaí</a>
+</div>
   </div>
 
   <!-- ATACADÃO -->
   <div class="mercado" onclick="toggleCategorias('atacadao')">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFuhiISP1Db8A7nyun18110ezxIvca2__6uQ&s">
     <p>Atacadão</p>
+<!-- ATACADÃO -->
+<div id="atacadao" class="categorias">
+
+<a href="https://www.atacadao.com.br/catalogo" target="_blank"> Ofertas🛒 Atacadão </a>
+</div>
   </div>
 
    <!-- Super 4 RN -->
   <div class="mercado" onclick="toggleCategorias('Super 4 RN')">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf3zM0WKuHF7pc0b3ICteD-57jOnS52zRQMw&s">
     <p>Super 4 RN</p>
-  </div>
-
-</div>
-
-<!-- CATEGORIAS NORDESTÃO -->
-<div id="nordestao" class="categorias">
-
-<a href="https://www.lojaonline.nordestao.com.br/" target="_blank"> Ofertas 🛒 Nordestão</a>
-
-</div>
-
-<!-- BOMDIA -->
-<div id="bomdia" class="categorias">
-<a href="https://www.bomdiasupermercado.com.br/#/Ofertas" target="_blank"> Ofertas 🛒 Bom dia</a>
-</div>
-
-<!-- Super show -->
-<div id="Super show" class="categorias">
-<a href="https://redesupershow.com.br/encarte/" target="_blank"> Ofertas 🛒 Super Show</a>
-</div>
-
-<!-- Assaí -->
-<div id="Assaí" class="categorias">
-<a href="https://www.assai.com.br/ofertas/rio-grande-do-norte/assai-natal" target="_blank">Ofertas 🛒 Assaí</a>
-</div>
-
-<!-- ATACADÃO -->
-<div id="atacadao" class="categorias">
-
-<a href="https://www.atacadao.com.br/catalogo" target="_blank"> Ofertas 🛒 Atacadão</a>
-</div>
-
 <!-- Super 4 RN -->
 <div id="Super 4 RN" class="categorias">
 
 <a href="https://www.instagram.com/super4alecrim/p/DWV_AzQDsCK/" target="_blank"> Ofertas 🛒 Super 4</a>
+</div>
+  </div>
+
 </div>
 
 <button id="btnInstall">📲 Instalar App</button>
