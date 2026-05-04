@@ -2,6 +2,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<style>
+.carrossel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+  right: 0;
+  background: white;
+  border-top: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.slide {
+  min-width: 100%;
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  height: 50px;
+  object-fit: contain;
+}
+
+.carrossel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 5px;
+}
+
+.prev { left: 5px; }
+.next { right: 5px; }
+
+.anuncie {
+  font-size: 12px;
+  padding: 5px;
+  text-align: center;
+}
+</style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Busca de Promoções</title>
@@ -15,6 +64,8 @@ body {
   margin: 0;
   background: #f5f5f5;
   text-align: center;
+
+  padding-bottom: 140px;
 }
 
 h1 {
@@ -98,7 +149,29 @@ h1 {
 }
 </style>
 </head>
+<!-- 🔻 ANÚNCIOS CARROSSEL -->
+<div class="carrossel">
+  <div class="slides">
 
+    <div class="slide" data-link="https://www.instagram.com/institutodabelezarn">
+      <img src="https://i.imgur.com/8HJ5qdV.png">
+      <h4>Instituto da beleza rn</h4>
+    </div>
+
+    <div class="slide" data-link="https://rhema.org.br/unidade/natal">
+      <img src="https://rhema.org.br/wp-content/uploads/2024/10/Rhema-Sede.webp">
+      <h4>Rhema Brasil</h4>
+    </div>
+
+  </div>
+
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+
+  <div class="anuncie">
+    📢 <a href="https://wa.me/5584986222876?text=Quero%20anunciar">Anuncie aqui</a>
+  </div>
+</div>
 <body>
 
 <h1>🔍 Buscar Promoções</h1>
@@ -168,18 +241,6 @@ h1 {
 <a href="https://www.instagram.com/p/DWldesvDef0/?img_index=" target="_blank"> Ofertas 🛒 Super 4</a>
 </div>
   </div>
-
-   <!-- Polpa do Bigode -->
-  <div class="mercado" onclick="toggleCategorias('Polpa do Bigode')">
-    <img src="https://i.imgur.com/O248wQk.jpeg">
-    <p>Polpa do Bigode</p>
-<!-- Super 4 RN -->
-<div id="Polpa do Bigode" class="categorias">
-
-<a href="https://meusaplicativoscom-pixel.github.io/PolpaDoBigode/" target="_blank"> Ofertas 🛒 Polpa do Bigode</a>
-</div>
-  </div>
-
 </div>
 
 <button id="btnInstall">📲 Instalar App</button>
@@ -273,6 +334,28 @@ if ("serviceWorker" in navigator) {
       }
     }
   });
+</script>
+<script>
+let i = 0;
+
+function slide(n) {
+  const s = document.querySelector(".slides");
+  const total = document.querySelectorAll(".slide").length;
+  i = (n + total) % total;
+  s.style.transform = `translateX(${-i * 100}%)`;
+}
+
+document.querySelector(".next").onclick = () => slide(i + 1);
+document.querySelector(".prev").onclick = () => slide(i - 1);
+
+setInterval(() => slide(i + 1), 4000);
+
+document.querySelectorAll(".slide").forEach(el => {
+  el.onclick = () => {
+    const link = el.getAttribute("data-link");
+    if (link) window.open(link, "_blank");
+  };
+});
 </script>
 </body>
 </html>
